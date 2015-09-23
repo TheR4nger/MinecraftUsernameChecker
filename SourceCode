@@ -1,0 +1,10 @@
+Public Class Form1
+    Private Sub FlatButton1_Click(sender As Object, e As EventArgs) Handles FlatButton1.Click
+
+        Dim webClient As New System.Net.WebClient
+        Dim Resolve As String = webClient.DownloadString("http://api.predator.wtf/minecraft/?arguments=" + FlatTextBox1.Text)
+
+        FlatLabel1.Text = (Resolve)
+
+    End Sub
+End Class
